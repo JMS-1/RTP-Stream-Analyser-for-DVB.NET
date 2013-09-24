@@ -1,4 +1,4 @@
-RTP-Stream-Analyser-for-DVB.NET
+RTP Stream Analyser for DVB.NET
 ===============================
 
 (to be announced)
