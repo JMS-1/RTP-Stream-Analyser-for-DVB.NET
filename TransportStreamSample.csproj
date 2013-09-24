@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{29966136-A044-4D9B-9454-9D641220DBC7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TransportStreamSample</RootNamespace>
+    <AssemblyName>TransportStreamSample</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <DocumentationFile>bin\TransportStreamSample.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <DocumentationFile>bin\TransportStreamSample.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JMS.DVB">
+      <HintPath>C:\Program Files\JMS\DVB.NET 4.1\RunTime\JMS.DVB.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JMS.DVB.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=7fcd07b9604a99b1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\JMS\DVB.NET 4.1\GAC\JMS.DVB.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="JMS.DVB.EPG">
+      <HintPath>C:\Program Files\JMS\DVB.NET 4.1\RunTime\JMS.DVB.EPG.dll</HintPath>
+      <Private>False</Private>
+      <Aliases>legacy</Aliases>
+    </Reference>
+    <Reference Include="JMS.DVB.HardwareAbstraction">
+      <HintPath>C:\Program Files\JMS\DVB.NET 4.1\RunTime\JMS.DVB.HardwareAbstraction.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JMS.DVB.SITables">
+      <HintPath>C:\Program Files\JMS\DVB.NET 4.1\RunTime\JMS.DVB.SITables.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JMS.DVB.SourceManagement">
+      <HintPath>C:\Program Files\JMS\DVB.NET 4.1\RunTime\JMS.DVB.SourceManagement.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="JMS.DVB.TS">
+      <HintPath>C:\Program Files\JMS\DVB.NET 4.1\RunTime\JMS.DVB.TS.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RtpPacketDispatcher.cs" />
+    <Compile Include="RtpTransportStreamAnalyser.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
